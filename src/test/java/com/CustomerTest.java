@@ -8,7 +8,13 @@ public class CustomerTest {
 
     @Test
     void successfullyBuyCD() {
-        Customer customer = new Customer();
-        assertEquals(true, customer.charged());
+        Customer customer = new Customer(true);
+        assertEquals(true, customer.wasCharged());
+    }
+
+    @Test
+    void paymentDeclined() {
+        Customer customer = new Customer(false);
+        assertEquals(false, customer.wasCharged());
     }
 }

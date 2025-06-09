@@ -8,7 +8,7 @@ the text of their review if they want to say more.
 Use cases are:
 Customer 
 - Buy CD: Scenarios are: 
-A) In stock, and payment is accepted then stock goes down by 1 and card is charged price of CD. 
+A) In stock, and payment is accepted then stock goes down by 1. 
 B) In stock, and payment is declined then stock remains unchanged. 
 C) Not in stock then no payment is taken and stock remains unchanged. 
 - Search for CD

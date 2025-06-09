@@ -2,7 +2,13 @@ package com;
 
 public class Customer {
 
-    boolean charged() {
-        return true;
+    private boolean charged;
+
+    Customer(boolean c) {
+        charged = c;
+    }
+
+    boolean wasCharged() {
+        return charged;
     }
 }
