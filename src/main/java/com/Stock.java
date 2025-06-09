@@ -12,7 +12,7 @@ public class Stock {
         return count;
     }
 
-    void boughtCD() {
-        count--;
+    void boughtCD(int howMany) {
+        count = count - howMany;
     }
 }

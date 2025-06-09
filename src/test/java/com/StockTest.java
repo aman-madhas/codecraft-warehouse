@@ -7,9 +7,16 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class StockTest {
 
     @Test
-    void customerSuccessfullyBuysCD() {
+    void customerSuccessfullyBuysOneCD() {
         Stock stock = new Stock(5);
-        stock.boughtCD();
+        stock.boughtCD(1);
         assertEquals(4, stock.get());
+    }
+
+    @Test
+    void customerSuccessfullyBuysMultipleCDs() {
+        Stock stock = new Stock(5);
+        stock.boughtCD(3);
+        assertEquals(2, stock.get());
     }
 }
