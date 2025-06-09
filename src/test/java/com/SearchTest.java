@@ -30,13 +30,25 @@ public class SearchTest {
 
     @Test
     void searchByArtistNoResults() {
-        Search search = new Search(stock, "Adele");
+        SearchCDs search = new SearchCDs(stock, "Adele");
         assertEquals(0, search.getCountByArtist());
     }
 
     @Test
     void searchByArtistWithResults() {
-        Search search = new Search(stock, "Coldplay");
+        SearchCDs search = new SearchCDs(stock, "Coldplay");
         assertEquals(4, search.getCountByArtist());
+    }
+
+    @Test
+    void searchByTitleNoResults() {
+        SearchCDs search = new SearchCDs(stock, "21");
+        assertEquals(0, search.getCountByTitle());
+    }
+
+    @Test
+    void searchByTitleWithResults() {
+        SearchCDs search = new SearchCDs(stock, "The Scientist");
+        assertEquals(3, search.getCountByTitle());
     }
 }

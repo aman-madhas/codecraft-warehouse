@@ -13,6 +13,7 @@ public class Stock {
     long getCountByArtist(String artist) {
         return inventory.stream().filter(t -> t.endsWith("-" + artist)).count();
     }
+    long getCountByTitle(String title) {return inventory.stream().filter(t-> t.startsWith(title + "-")).count();}
 
     long getCount(String title, String artist) {
         return inventory.stream().filter(t -> t.equals(title + "-" + artist)).count();
@@ -27,4 +28,5 @@ public class Stock {
             }
         }
     }
+
 }
