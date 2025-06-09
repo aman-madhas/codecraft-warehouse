@@ -8,7 +8,7 @@ public class SearchTest {
 
     @Test
     void searchByArtistNoResults() {
-        Search search = new Search();
+        Search search = new Search("Taylor Swift");
         assertEquals(0, search.results());
     }
 }
