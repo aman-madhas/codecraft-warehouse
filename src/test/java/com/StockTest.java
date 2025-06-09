@@ -19,4 +19,11 @@ public class StockTest {
         stock.boughtCD(3);
         assertEquals(2, stock.get());
     }
+
+    @Test
+    void notEnoughStock() {
+        Stock stock = new Stock(5);
+        stock.boughtCD(6);
+        assertEquals(5, stock.get());
+    }
 }

@@ -13,6 +13,8 @@ public class Stock {
     }
 
     void boughtCD(int howMany) {
-        count = count - howMany;
+        if (count - howMany > 0) {
+            count = count - howMany;
+        }
     }
 }
