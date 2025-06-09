@@ -3,12 +3,14 @@ package com;
 public class Search {
 
     private String artist;
+    private Stock stock;
 
-    Search(String a) {
+    Search(Stock s, String a) {
+        stock = s;
         artist = a;
     }
 
-    int results() {
-        return 0;
+    long getCountByArtist() {
+        return stock.getCountByArtist(artist);
     }
 }
