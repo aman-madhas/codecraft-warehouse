@@ -1,10 +1,10 @@
 package com;
 
-public class Customer {
+public class CustomerOrder {
 
     private boolean charged;
 
-    Customer(boolean c) {
+    CustomerOrder(boolean c) {
         charged = c;
     }
 

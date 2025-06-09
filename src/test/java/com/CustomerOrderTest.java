@@ -4,17 +4,17 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CustomerTest {
+public class CustomerOrderTest {
 
     @Test
-    void successfullyBuyCD() {
-        Customer customer = new Customer(true);
+    void paymentAccepted() {
+        CustomerOrder customer = new CustomerOrder(true);
         assertEquals(true, customer.wasCharged());
     }
 
     @Test
     void paymentDeclined() {
-        Customer customer = new Customer(false);
+        CustomerOrder customer = new CustomerOrder(false);
         assertEquals(false, customer.wasCharged());
     }
 }
