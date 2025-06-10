@@ -1,10 +1,14 @@
 package com;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Stock {
 
     private List<String> inventory;
+    private Map<String, List<Review>> reviews = new HashMap<>();
 
     Stock(List<String> s) {
         inventory = s;
@@ -29,4 +33,11 @@ public class Stock {
         }
     }
 
+    void addRating(String cd, int rating){
+        reviews.computeIfAbsent(cd, c->new ArrayList<>()).add(new Review(rating));
+    }
+
+    List<Review> getRating(String cd){
+        return reviews.get(cd);
+    }
 }
